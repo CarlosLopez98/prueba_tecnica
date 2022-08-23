@@ -18,27 +18,43 @@ app.use((req, res, next) => {
 });
 
 // Cadena para almacenar el texto
-let cad = '';
+let cad = 'Hola como estas';
 
 // Rutas
+let root = express.Router();
+
+root.get('/', (req, res) => {
+    return res.status(200).send("Api para prueba técnica en Creativa. <a href='http://localhost:5500/api'>Ve acá</a>");
+})
+
 let router = express.Router();
 
-router.get('/api', (req, res) => {
+router.get('/', (req, res) => {
     return res.status(200).send({
         texto: cad
     });
 });
 
-router.post('/api', (req, res) => {
-    let text = req.params.text;
+router.post('/', (req, res) => {
+    // El usuario envia texto para concatenar a la cadena
+    let text = req.body.text;
 
     // Si no se envia nada en la peticion
     if (text == null) {
         return res.status(400).send({
             message: 'No hay contenido nuevo'
-        })
+        });
     }
+
+    cad += " " + text;
+
+    return res.status(201).send({
+        message: 'Se agrego el texto'
+    });
 });
+
+app.use('/', root);
+app.use('/api', router);
 
 // Exportar el modulo
 module.exports = app;
