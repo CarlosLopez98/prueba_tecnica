@@ -67,11 +67,13 @@ body {
 }
 
 .response {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 400px;
-    height: 100px;
+    height: 140px;
     padding: 10px;
     background-color: #f1f1f1;
     border-radius: 10px;
-    text-align: center;
     overflow-y: auto;
 }

@@ -46,7 +46,12 @@ router.post('/', (req, res) => {
         });
     }
 
-    cad += ". " + text;
+    // Cada vez que se agrega texto se separa por un punto
+    // A menos que sea la primera vez
+    if (cad == "")
+        cad += text;
+    else
+        cad += ". " + text;
 
     return res.status(201).send({
         message: 'Se agrego el texto'
