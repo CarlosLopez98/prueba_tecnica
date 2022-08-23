@@ -18,7 +18,7 @@ app.use((req, res, next) => {
 });
 
 // Cadena para almacenar el texto
-let cad = 'Hola como estas';
+let cad = '';
 
 // Rutas
 let root = express.Router();
@@ -46,7 +46,7 @@ router.post('/', (req, res) => {
         });
     }
 
-    cad += " " + text;
+    cad += ". " + text;
 
     return res.status(201).send({
         message: 'Se agrego el texto'
