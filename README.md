@@ -9,10 +9,10 @@ Por otro lado, el cliente está compuesto por un formulario que contiene un inpu
 
 # Instrucciones
 - Ejecutar el servidor de node
-'''
+```
 cd api/
 npm start
-'''
+```
 - Abrir el archivo html ubicado en 'front/index.html'
 
 Si todo salio bien, debería funcionar correctamente.
