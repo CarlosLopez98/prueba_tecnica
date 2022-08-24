@@ -8,11 +8,19 @@ La peticion GET simplemente devuelve esta cadena para que el cliente la maneje.
 Por otro lado, el cliente está compuesto por un formulario que contiene un input y un botón, es decir, escribimos algo en el input y le damos al botón, esto ejecutara la petición POST a la API y de una vez hace la peticion GET para actualizar el contenido de la cadena, que en este caso se muestra en forma de lista usando como separacion para los items el punto(.).
 
 # Instrucciones
-- Ejecutar el servidor de node
+- Instalar las dependencias
 ```
 cd api/
+npm install
+```
+- Ejecutar el servidor de node
+(Ubicado en api/) 
+```
 npm start
 ```
-- Abrir el archivo html ubicado en 'front/index.html'
+- Abrir el archivo html ubicado en:
+```
+front/index.html
+```
 
 Si todo salio bien, debería funcionar correctamente.
